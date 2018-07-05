@@ -1,23 +1,25 @@
 // variaveis relacionadas aos mapas
-ArrayList<Mapa> mapas = new ArrayList<Mapa>();
-Mapa mapaAtual = null;
-int indiceMapa = 0;
-int qtdeMapas = 10;
-PVector posicaoInicialPersonagem;
+ArrayList<Mapa> mapas  = new ArrayList<Mapa>();
+Mapa mapaAtual         = null;
+int indiceMapa         = 0;
+int qtdeMapas          = 10;
+PVector posicaoInicialPersonagem = new PVector();
 
 // tabela de mapas
-TabelaMapas tabelaMapas = new TabelaMapas();
+TabelaMapas tabelaMapas   = new TabelaMapas();
 
 // gerações
 int geracao = 0;
-boolean novaGeracao = false;
+boolean novaGeracao       = false;
 
 // variaveis de teste
-boolean isDebugEnabled = false;
+boolean isDebugEnabled    = false;
 
 // variaveis de controle
-boolean autoSimulate = false;
-double tempoAtualizacao = 0;
+boolean autoSimulate      = true;
+boolean pause             = false;
+boolean desenharGrid      = false;
+double tempoAtualizacao   = 0;
 int velocidadeAtualizacao = 1;
                                                                                                                                      
 void setup() {
@@ -40,8 +42,9 @@ void draw() {
   try {
     tabelaMapas.desenhar();
     mapaAtual.desenhar();
-    
-    atualizarJogo();
+    if (!pause) {
+      atualizarJogo();
+    }
   } catch(Exception e) {
     e.printStackTrace();
     exit();
@@ -51,7 +54,6 @@ void draw() {
 void criarMapas() {
   mapas.add(new Mapa());
   mapaAtual = mapas.get(0);
-  posicaoInicialPersonagem = new PVector();
   posicaoInicialPersonagem.x = mapas.get(0).pers.posicao.x;
   posicaoInicialPersonagem.y = mapas.get(0).pers.posicao.y;
   for (int i = 1; i < 10; i++) {
@@ -67,29 +69,35 @@ void gerarNovaGeracao() {
 }
 
 void atualizarJogo() {
-    
-    if (tempoAtualizacao > 20 || mousePressed && mapaAtual.pers.emMovimento == false) {
-      tempoAtualizacao = 0;
-      for (Mapa mapa : mapas) {
-        mapa.pers.emMovimento = true;
-        mapa.resetarValores();
-      }
-    }
+  if (tempoAtualizacao > 5 || mousePressed && mapaAtual.pers.emMovimento == false) {
+    tempoAtualizacao = 0; //<>//
     for (Mapa mapa : mapas) {
-      mapa.atualizar();
+      mapa.fitnessTotal = preverFitness(mapa);
+      mapa.pers.emMovimento = true;
+      mapa.resetarValores(); //<>//
     }
-    
-    // realizar a nova geração
-    if(novaGeracao) {
-      gerarNovaGeracao();
-    }
-    
-    if (mapaAtual.pers.emMovimento == false && autoSimulate) {
-      tempoAtualizacao += 0.1;
-    }
+  }
+  for (Mapa mapa : mapas) {
+    mapa.atualizar();
+  }
+  
+  // realizar a nova geração
+  if(novaGeracao) {
+    gerarNovaGeracao();
+  }
+  
+  if (mapaAtual.pers.emMovimento == false && autoSimulate) {
+    tempoAtualizacao += 0.1;
+  }
 }
 
 void keyPressed() {
+  if (key == 'p') {
+    pause = !pause;
+  } else if (key == 'd') {
+    desenharGrid = !desenharGrid; 
+  }
+  
   if (key == CODED) {
     if (keyCode == LEFT) {
       if (indiceMapa > 0) {

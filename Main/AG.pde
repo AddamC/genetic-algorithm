@@ -4,16 +4,20 @@ void calcularFitness(Mapa mapa) {
   Personagem pers = mapa.pers;
   ArrayList<Inimigo> inimigos = mapa.inimigos;
   ArrayList<Coletavel> coletaveis = mapa.coletaveis;
+  ArrayList<GameObject> objetos = new ArrayList<GameObject>();
   
-  for (Inimigo inimigo : inimigos) {
-    if (pers.posicao.x == inimigo.posicao.x && pers.posicao.y == inimigo.posicao.y) {
-      mapa.fitness -= 2;    
-    }
-  }
+  objetos.addAll(inimigos);
+  objetos.addAll(coletaveis);
   
-  for (Coletavel coletavel : coletaveis) {
-    if (pers.posicao.x == coletavel.posicao.x && pers.posicao.y == coletavel.posicao.y) {
-      mapa.fitness += 2;
+  for (GameObject objeto : objetos) {
+    if (pers.posicao.x == objeto.posicao.x && pers.posicao.y == objeto.posicao.y) {
+      if (objeto.etiqueta == "inimigo") {
+        mapa.fitness -= 2;
+      } else if (objeto.etiqueta == "coletavel") {
+        mapa.fitness += 2;
+      } else if (objeto.etiqueta == "vazio") {
+        mapa.fitness += 1;
+      }
     }
   }
   
@@ -38,38 +42,70 @@ void crossOver() {
     movimentos1 = mapa1.pers.movimentos;
     
     for (int j = i+1; j < qtdeMelhoresFitness; j++) {
-      mapa2 = mapas.get(mapIndicesFitness.get(j)); //<>//
+      mapa2 = mapas.get(mapIndicesFitness.get(j));
       movimentos2 = mapa2.pers.movimentos;
       
-      novoMovimento.clear();
+      novoMovimento.clear(); // limpar o arranjo de movimentos para proxima iteracao
       for(int k = 0; k < qtdeMovimentos; k++) {
-        if (k < qtdeMovimentos / 2) {
-          //novoMovimento.set(k, movimentos1[k]);   
+        if (k < qtdeMovimentos / 2) {   
           novoMovimento.add(movimentos1[k]);
         } else {
-          //novoMovimento.set(k, movimentos2[k]);
           novoMovimento.add(movimentos2[k]);
         }
       }
       novosMovimentos.add(novoMovimento);
-      // mutacao(mapas.get(cont)); 
     }
   }
   
   for (int i = 0; i < novosMovimentos.size(); i++) {
     for (int j = 0; j < qtdeMovimentos; j++) {
-      mapas.get(i).pers.movimentos[j] = novosMovimentos.get(i).get(j); //<>//
-      mutacao(mapas.get(i));
+      mapas.get(i).pers.movimentos[j] = novosMovimentos.get(i).get(j);
+      realizarMutacao(mapas.get(i));
     }
   }
-   //<>//
-  // resetar Posicoes dos personagens
+  
+  // resetar Posicoes das celulas
   for (int i = 0; i < mapas.size(); i++) {
     mapas.get(i).resetarValores();
   }
 }
 
-void mutacao(Mapa mapa) {
+void realizarMutacao(Mapa mapa) {
   int indiceMutacao = (int) random(0, mapa.pers.movimentos.length);
   mapa.pers.movimentos[indiceMutacao] = (int) random(1, 9);
+}
+
+int preverFitness(Mapa mapa) {
+  
+  int fitness = 0;
+  
+  PVector posicao = new PVector();
+  posicao.x = mapa.pers.posicao.x;
+  posicao.y = mapa.pers.posicao.y;
+  int[] movimentos = mapa.pers.movimentos;
+  
+  ArrayList<Inimigo> inimigos = mapa.inimigos;
+  ArrayList<Coletavel> coletaveis = mapa.coletaveis;
+  ArrayList<GameObject> objetos = new ArrayList<GameObject>();
+  
+  objetos.addAll(inimigos);
+  objetos.addAll(coletaveis);
+  
+  for (int i = 0; i < movimentos.length; i++) {
+    movimentar(posicao, movimentos[i]);
+    
+    // verificar posicao com um conjunto de objetos
+    for (GameObject objeto : objetos) {
+      if (posicao.x == objeto.posicao.x && posicao.y == objeto.posicao.y) {
+        if (objeto.etiqueta == "inimigo") {
+          fitness -= 2;
+        } else if (objeto.etiqueta == "coletavel") {
+          fitness += 2;
+        } else if (objeto.etiqueta == "vazio") {
+          fitness += 1;
+        }
+      }
+    }
+  }
+  return fitness;
 }

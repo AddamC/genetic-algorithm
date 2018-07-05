@@ -8,6 +8,7 @@ class Mapa {
   ArrayList<Coletavel> coletaveis = new ArrayList<Coletavel>();
   ArrayList<PVector> posicoesLivres = new ArrayList<PVector>(); 
   int fitness = 0;
+  int fitnessTotal = 0;
   
   Mapa() {
     this.posicaoGrid.x = 0;
@@ -78,12 +79,16 @@ class Mapa {
   
   void desenhar() {
     // desenhar grid
-    noFill();
-    stroke(150,150,150);
-    for (int i = 0; i < this.largura; i++) {
-      for (int j = 0; j < this.altura; j++) {        
-        desenharCelula(i, j);  
+    if (desenharGrid) {
+      noFill();
+      stroke(150,150,150);
+      for (int i = 0; i < this.largura; i++) {
+        for (int j = 0; j < this.altura; j++) {        
+          desenharCelula(i, j);  
+        }
       }
+    } else {
+      stroke(150,150,150);
     }
     
     // desenhar inimigos
@@ -111,13 +116,17 @@ class Mapa {
   
   void atualizar() {
     if (this.pers.emMovimento) {
-      if (this.pers.indiceMovimento < this.pers.movimentos.length) {
-        delay(10);
+      if (this.pers.indiceMovimento < this.pers.qtdeMovimentos) {
+        delay(5);
         this.pers.movimentar();
         this.pers.indiceMovimento += 1;
         verificarPosicaoPersonagem();
         calcularFitness(this);
       } else {
+        delay(50);
+        if (autoSimulate) {
+          novaGeracao = true;
+        }
         this.pers.emMovimento = false;
       }
     }
