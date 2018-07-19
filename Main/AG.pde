@@ -2,14 +2,8 @@ int fitness = 0;
 
 void calcularFitness(Mapa mapa) {
   Personagem pers = mapa.pers;
-  ArrayList<Inimigo> inimigos = mapa.inimigos;
-  ArrayList<Coletavel> coletaveis = mapa.coletaveis;
-  ArrayList<GameObject> objetos = new ArrayList<GameObject>();
   
-  objetos.addAll(inimigos);
-  objetos.addAll(coletaveis);
-  
-  for (GameObject objeto : objetos) {
+  for (GameObject objeto : mapa.todosObjetos) {
     if (pers.posicao.x == objeto.posicao.x && pers.posicao.y == objeto.posicao.y) {
       if (objeto.etiqueta == "inimigo") {
         mapa.fitness -= 2;
@@ -18,10 +12,8 @@ void calcularFitness(Mapa mapa) {
       } else if (objeto.etiqueta == "vazio") {
         mapa.fitness += 1;
       }
-    }
+    } //<>//
   }
-  
-  ordenarMapasPorFitness();
 }
 
 void crossOver() {
@@ -35,8 +27,22 @@ void crossOver() {
   
   int qtdeMovimentos = mapas.get(0).pers.qtdeMovimentos;
   ArrayList<ArrayList<Integer>> novosMovimentos = new ArrayList<ArrayList<Integer>>();
-  ArrayList<Integer> novoMovimento = new ArrayList<Integer>(qtdeMovimentos);
+  ArrayList<ArrayList<Integer>> movimentosMelhorFitness = new ArrayList<ArrayList<Integer>>();
+  ArrayList<Integer> movimentosArray = new ArrayList<Integer>(qtdeMovimentos);
   
+  // passando valores de um arranjo primitivo para um ArrayList
+  for (int i = 0; i < qtdeMelhoresFitness; i++) {
+    movimentos1 = mapas.get(mapIndicesFitness.get(i)).pers.movimentos;
+    for (int j = 0; j < qtdeMovimentos; j++) {
+      movimentosArray.add(movimentos1[j]);
+    }
+    movimentosMelhorFitness.add(movimentosArray);
+  }
+  
+  /* 
+  TODO: melhorar codigo para tentar reutilizar o movimentosArray,
+  pois ja contem os melhores movimentos
+  */
   for (int i = 0; i < qtdeMelhoresFitness - 1; i++) {
     mapa1 = mapas.get(mapIndicesFitness.get(i));
     movimentos1 = mapa1.pers.movimentos;
@@ -45,22 +51,29 @@ void crossOver() {
       mapa2 = mapas.get(mapIndicesFitness.get(j));
       movimentos2 = mapa2.pers.movimentos;
       
-      novoMovimento.clear(); // limpar o arranjo de movimentos para proxima iteracao
+      movimentosArray.clear(); // limpar o arranjo de movimentos para proxima iteracao
       for(int k = 0; k < qtdeMovimentos; k++) {
         if (k < qtdeMovimentos / 2) {   
-          novoMovimento.add(movimentos1[k]);
+          movimentosArray.add(movimentos1[k]);
         } else {
-          novoMovimento.add(movimentos2[k]);
+          movimentosArray.add(movimentos2[k]);
         }
       }
-      novosMovimentos.add(novoMovimento);
+      novosMovimentos.add(movimentosArray);
     }
   }
   
-  for (int i = 0; i < novosMovimentos.size(); i++) {
-    for (int j = 0; j < qtdeMovimentos; j++) {
-      mapas.get(i).pers.movimentos[j] = novosMovimentos.get(i).get(j);
+  for (int i = 0, cont = 0; i < mapas.size(); i++) {
+    if (i < novosMovimentos.size()) {
+      for (int j = 0; j < qtdeMovimentos; j++) {
+        mapas.get(i).pers.movimentos[j] = novosMovimentos.get(i).get(j);
+      }
       realizarMutacao(mapas.get(i));
+    } else { // preencher os mapas restantes
+      for (int j = 0; j < qtdeMovimentos; j++) {
+        mapas.get(i).pers.movimentos[j] = movimentosMelhorFitness.get(cont).get(j);
+      }
+      cont++;
     }
   }
   
@@ -75,7 +88,7 @@ void realizarMutacao(Mapa mapa) {
   mapa.pers.movimentos[indiceMutacao] = (int) random(1, 9);
 }
 
-int preverFitness(Mapa mapa) {
+void preverFitness(Mapa mapa) { //<>//
   
   int fitness = 0;
   
@@ -84,28 +97,21 @@ int preverFitness(Mapa mapa) {
   posicao.y = mapa.pers.posicao.y;
   int[] movimentos = mapa.pers.movimentos;
   
-  ArrayList<Inimigo> inimigos = mapa.inimigos;
-  ArrayList<Coletavel> coletaveis = mapa.coletaveis;
-  ArrayList<GameObject> objetos = new ArrayList<GameObject>();
-  
-  objetos.addAll(inimigos);
-  objetos.addAll(coletaveis);
-  
   for (int i = 0; i < movimentos.length; i++) {
     movimentar(posicao, movimentos[i]);
     
     // verificar posicao com um conjunto de objetos
-    for (GameObject objeto : objetos) {
+    for (GameObject objeto : mapa.todosObjetos) {
       if (posicao.x == objeto.posicao.x && posicao.y == objeto.posicao.y) {
         if (objeto.etiqueta == "inimigo") {
           fitness -= 2;
         } else if (objeto.etiqueta == "coletavel") {
           fitness += 2;
-        } else if (objeto.etiqueta == "vazio") {
+        } else if (objeto.etiqueta == "vazio") { //<>//
           fitness += 1;
         }
       }
     }
   }
-  return fitness;
+  mapa.fitnessTotal = fitness;
 }

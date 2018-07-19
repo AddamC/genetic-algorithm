@@ -6,14 +6,16 @@ class TabelaMapas {
   int qtdeCelulas;
   int fitness;
   int rankCelula;
+  String descricao;
+  String descPosicaoCelula;
   
   TabelaMapas() {
-    this.qtdeCelulas = 5;
+    this.qtdeCelulas = 4;
     
-    this.posicaoGrid.x = this.qtdeCelulas * 100;
+    this.posicaoGrid.x = 500;
     this.posicaoGrid.y = 25;
-    this.largura = 300;
-    this.altura = 500;   
+    this.largura = 500;
+    this.altura = this.qtdeCelulas * 95;   
   }
   
   void atualizar() {
@@ -22,7 +24,7 @@ class TabelaMapas {
   void desenhar() {
     fill(color(150,150,150,150));
     rect(this.posicaoGrid.x, this.posicaoGrid.y, this.largura, this.altura);
-    String descricao = "";
+    descricao = "";
     
     // TODO: melhorar posicionamento das celulas
     if (mapasFitness != null) {
@@ -34,7 +36,8 @@ class TabelaMapas {
         descricao = "Mapa: " + mapasFitness.get(i) +
              "    Fitness total: " + mapas.get(mapasFitness.get(i)).fitnessTotal +
              "    Fitness: " + mapas.get(mapasFitness.get(i)).fitness;
-             
+        
+        text(i + 1 + "º", this.posicaoGrid.x + 10, i * 95 + 60);
         text(descricao, this.posicaoGrid.x + 10, i * 95 + 100);
       }
     }   

@@ -1,0 +1,3 @@
+class EmptyObject extends GameObject {
+  
+}
