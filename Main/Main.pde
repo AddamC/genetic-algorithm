@@ -18,6 +18,7 @@ boolean novaGeracao       = false;
 boolean isDebugEnabled    = false;
 
 // variaveis de controle
+boolean iniciarPosTela    = false;
 boolean autoSimulate      = true;
 boolean pause             = false;
 boolean desenharGrid      = false;
@@ -35,8 +36,18 @@ void setup() {
 }
 
 void draw() {
+  // iniciar posicao da tela
+  if (!iniciarPosTela) {
+    surface.setLocation(200,0);
+    iniciarPosTela = true;
+  }
+  
+  if (geracao > 4) {
+    println("teste");
+  }
+  
   clear();
-  fill(255,255,255);
+  background(color(25,25,25));
   atualizarGUI();
   if (isDebugEnabled) {
     desenharTexto();

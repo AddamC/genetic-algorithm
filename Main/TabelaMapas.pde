@@ -12,7 +12,7 @@ class TabelaMapas {
   TabelaMapas() {
     this.qtdeCelulas = 4;
     
-    this.posicaoGrid.x = 500;
+    this.posicaoGrid.x = 10;
     this.posicaoGrid.y = 25;
     this.largura = 500;
     this.altura = this.qtdeCelulas * 95;   

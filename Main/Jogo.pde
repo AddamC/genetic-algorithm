@@ -56,6 +56,7 @@ void criarMapas() {
   posicaoInicialPersonagem.y = mapas.get(0).pers.posicao.y;
   for (int numMapa = 1; numMapa < 10; numMapa++) {
     mapas.add(new Mapa(mapaAtual));
+    mapas.get(numMapa).id = numMapa;
     preverFitness(mapas.get(numMapa));
   }
   ordenarMapasPorFitness();
@@ -63,7 +64,7 @@ void criarMapas() {
 
 void gerarNovaGeracao() {
   crossOver();
-  geracao = geracao + 1;
+  geracao++;
   novaGeracao = false;
   ordenarMapasPorFitness();
   for (Mapa mapa : mapas) {

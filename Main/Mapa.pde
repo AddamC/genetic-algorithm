@@ -1,22 +1,30 @@
 class Mapa {
-  PVector posicaoGrid = new PVector();
+  int id;
   int largura;
   int altura;
+  int fitness      = 0;
+  int fitnessTotal = 0;
+  
   float tamanhoCelula;
-  Personagem pers;
+  
   ArrayList<Inimigo> inimigos         = new ArrayList<Inimigo>();
   ArrayList<Coletavel> coletaveis     = new ArrayList<Coletavel>();
   ArrayList<GameObject> todosObjetos  = new ArrayList<GameObject>();
   ArrayList<PVector> posicoesLivres   = new ArrayList<PVector>(); 
-  int fitness = 0;
-  int fitnessTotal = 0;
+  
+  HashMap<PVector, GameObject> mapObjetos = new HashMap<PVector, GameObject>();
+  
+  PVector posicaoGrid = new PVector();
+  
+  Personagem pers;
   
   Mapa() {
-    this.posicaoGrid.x = 20;
+    this.id = 0;
+    this.posicaoGrid.x = 530;
     this.posicaoGrid.y = 25;
     this.largura       = 32;
     this.altura        = 32;
-    this.tamanhoCelula = 15;
+    this.tamanhoCelula = 20;
     
     // config personagem no mundo
     this.pers = new Personagem();
@@ -54,12 +62,15 @@ class Mapa {
     this.todosObjetos.addAll(this.inimigos);
     this.todosObjetos.addAll(this.coletaveis);
     for (int i = 0; i < this.posicoesLivres.size(); i++) {
-      this.todosObjetos.add(new EmptyObject()); //<>//
+      this.todosObjetos.add(new EmptyObject());
       this.todosObjetos.get(this.todosObjetos.size() - 1).posicao.x = this.posicoesLivres.get(i).x;
       this.todosObjetos.get(this.todosObjetos.size() - 1).posicao.y = this.posicoesLivres.get(i).y;
     }
+    
+    this.atualizarMapaObjetos();
   }
   
+  // construtor para copia indireta do mapaPai
   Mapa(Mapa mapaPai) {
     this.posicaoGrid.x = mapaPai.posicaoGrid.x;
     this.posicaoGrid.y = mapaPai.posicaoGrid.y;
@@ -90,10 +101,14 @@ class Mapa {
       this.todosObjetos.get(i).posicao.y = mapaPai.todosObjetos.get(i).posicao.y;
       this.todosObjetos.get(i).etiqueta = mapaPai.todosObjetos.get(i).etiqueta;
     }
-    
+    this.atualizarMapaObjetos();
   }
   
   void desenhar() {
+    stroke(255,0,0);
+    fill(255,255,255);
+    rect(this.posicaoGrid.x - 5, this.posicaoGrid.y - 5, this.largura*this.tamanhoCelula+10, this.altura*tamanhoCelula+10);
+    fill(color(0,0,0));
     rect(this.posicaoGrid.x, this.posicaoGrid.y, this.largura * this.tamanhoCelula, this.altura * this.tamanhoCelula);
     
     // desenhar grid
@@ -137,7 +152,12 @@ class Mapa {
       if (this.pers.indiceMovimento < this.pers.qtdeMovimentos) {
         this.pers.movimentar();
         this.pers.indiceMovimento++;
-        verificarPosicaoPersonagem();
+        verificarPosicaoObjeto(this.pers.posicao);
+        
+        // teste de depuração
+        if (this.id == 0 && this.pers.indiceMovimento == 9) {
+          print("");
+        }
         calcularFitness(this);
       } else {
         delay(50);
@@ -158,21 +178,25 @@ class Mapa {
   }
   
   // TODO: analisar se é melhor separar essa função dentro da classe Personagem
-  void verificarPosicaoPersonagem() {
-    float persX = this.pers.posicao.x;
-    float persY = this.pers.posicao.y;
-    
-    if (persX > this.largura - 1) {
-      this.pers.posicao.x = this.largura - 1;
+  void verificarPosicaoObjeto(PVector posicao) {
+    if (posicao.x > this.largura - 1) {
+      posicao.x = this.largura - 1;
     }
-    if (persX < 0) {
-      this.pers.posicao.x = 0;
+    if (posicao.x < 0) {
+      posicao.x = 0;
     }
-    if (persY > this.altura - 1) {
-      this.pers.posicao.y = this.altura - 1;
+    if (posicao.y > this.altura - 1) {
+      posicao.y = this.altura - 1;
     }
-    if (persY < 0) {
-      this.pers.posicao.y = 0;
+    if (posicao.y < 0) {
+      posicao.y = 0;
+    }
+  }
+  
+  private void atualizarMapaObjetos() {
+    this.mapObjetos.clear();
+    for (GameObject gameObj : this.todosObjetos) {
+      this.mapObjetos.put(gameObj.posicao, gameObj);
     }
   }
 }

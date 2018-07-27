@@ -34,13 +34,14 @@ void ordenarMapasPorFitness() { //<>//
         mapaFitness = mapas.get(indicesLivresMapas.get(k));
       }
     }
-    println(mapas.indexOf(mapaFitness));
+    //println(mapas.indexOf(mapaFitness));
+    
     mapasFitness.put(i, mapas.indexOf(mapaFitness));
     indicesLivresMapas.remove(new Integer(mapas.indexOf(mapaFitness))); // nao esta removendo corretamente
   }
   mapaAtual = mapas.get(mapasFitness.get(0));
   indiceMapa = mapasFitness.get(0);
-  println(mapasFitness.toString());
+  //println(mapasFitness.toString());
 }
 
 HashMap<Integer, Integer> getMelhoresFitness(int qtde) {

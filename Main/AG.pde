@@ -2,17 +2,14 @@ int fitness = 0;
 
 void calcularFitness(Mapa mapa) {
   Personagem pers = mapa.pers;
+  GameObject objeto = mapa.mapObjetos.get(pers.posicao);
   
-  for (GameObject objeto : mapa.todosObjetos) {
-    if (pers.posicao.x == objeto.posicao.x && pers.posicao.y == objeto.posicao.y) {
-      if (objeto.etiqueta == "inimigo") {
-        mapa.fitness -= 2;
-      } else if (objeto.etiqueta == "coletavel") {
-        mapa.fitness += 2;
-      } else if (objeto.etiqueta == "vazio") {
-        mapa.fitness += 1;
-      }
-    } //<>//
+  if (objeto.etiqueta == "inimigo") {
+    mapa.fitness -= 2;
+  } else if (objeto.etiqueta == "coletavel") {
+    mapa.fitness += 2;
+  } else if (objeto.etiqueta == "vazio") {
+    mapa.fitness += 1;
   }
 }
 
@@ -84,13 +81,15 @@ void crossOver() {
 }
 
 void realizarMutacao(Mapa mapa) {
-  int indiceMutacao = (int) random(0, mapa.pers.movimentos.length);
-  mapa.pers.movimentos[indiceMutacao] = (int) random(1, 9);
+  for (int i = 0; i < 4; i++) {  
+    int indiceMutacao = (int) random(0, mapa.pers.movimentos.length);
+    mapa.pers.movimentos[indiceMutacao] = (int) random(1, 9);
+  }
 }
 
-void preverFitness(Mapa mapa) { //<>//
+void preverFitness(Mapa mapa) {
   
-  int fitness = 0;
+  int fitnessTotal = 0;
   
   PVector posicao = new PVector();
   posicao.x = mapa.pers.posicao.x;
@@ -99,19 +98,23 @@ void preverFitness(Mapa mapa) { //<>//
   
   for (int i = 0; i < movimentos.length; i++) {
     movimentar(posicao, movimentos[i]);
+    mapa.verificarPosicaoObjeto(posicao);
+    GameObject objeto = mapa.mapObjetos.get(posicao);
+    
+    if (objeto == null) {
+      print(); //<>//
+    }
     
     // verificar posicao com um conjunto de objetos
-    for (GameObject objeto : mapa.todosObjetos) {
-      if (posicao.x == objeto.posicao.x && posicao.y == objeto.posicao.y) {
-        if (objeto.etiqueta == "inimigo") {
-          fitness -= 2;
-        } else if (objeto.etiqueta == "coletavel") {
-          fitness += 2;
-        } else if (objeto.etiqueta == "vazio") { //<>//
-          fitness += 1;
-        }
-      }
+    if (objeto.etiqueta == "inimigo") {
+      fitnessTotal -= 2;
+    } else if (objeto.etiqueta == "coletavel") {
+      fitnessTotal += 2;
+    } else if (objeto.etiqueta == "vazio") {
+      fitnessTotal += 1;
     }
   }
-  mapa.fitnessTotal = fitness;
+  println("\n\nfitnessTotal: " + mapa.fitnessTotal + "\nfitness: " + fitnessTotal);
+  mapa.fitnessTotal = fitnessTotal;
+  println("fitnessTotal: " + mapa.fitnessTotal);
 }

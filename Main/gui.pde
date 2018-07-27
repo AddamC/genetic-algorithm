@@ -73,7 +73,7 @@ public void createGUI(){
   panelOpcoes.setText("Opções");
   panelOpcoes.setOpaque(true);
   panelOpcoes.addEventHandler(this, "panelOpcoes_Click1");
-  checkBoxAutoSimulate = new GCheckbox(this, 10, 30, 120, 20);
+  checkBoxAutoSimulate = new GCheckbox(this, 10, 30, 150, 20);
   checkBoxAutoSimulate.setIconAlign(GAlign.LEFT, GAlign.MIDDLE);
   checkBoxAutoSimulate.setText("Simulação automática");
   checkBoxAutoSimulate.setOpaque(false);
