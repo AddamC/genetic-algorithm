@@ -1,0 +1,2411 @@
+{
+  "largura": 32,
+  "fitnessTotal": 32,
+  "altura": 32,
+  "fitness": 11,
+  "tamanhoCelula": 18,
+  "inimigos": [
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    },
+    {
+      "etiqueta": "inimigo",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -65536
+    }
+  ],
+  "coletaveis": [
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    },
+    {
+      "etiqueta": "coletavel",
+      "posicao": {
+        "x": 31,
+        "y": 31
+      },
+      "cor": -6946616
+    }
+  ]
+}

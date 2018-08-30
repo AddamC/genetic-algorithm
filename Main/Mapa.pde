@@ -24,7 +24,7 @@ class Mapa {
     this.posicaoGrid.y = 25;
     this.largura       = 32;
     this.altura        = 32;
-    this.tamanhoCelula = 20;
+    this.tamanhoCelula = 18;
     
     // config personagem no mundo
     this.pers = new Personagem();
@@ -52,7 +52,7 @@ class Mapa {
       this.posicoesLivres.remove(posAleatoria);
     }
     
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 180; i++) {
       posAleatoria = (int)random(0, this.posicoesLivres.size());
       this.coletaveis.add(new Coletavel());
       this.coletaveis.get(i).posicao.x = this.posicoesLivres.get(posAleatoria).x;
@@ -104,10 +104,16 @@ class Mapa {
     this.atualizarMapaObjetos();
   }
   
+  float getGridY2() {
+    return posicaoGrid.y + (largura * tamanhoCelula);
+  }
+  
   void desenhar() {
-    stroke(255,0,0);
-    fill(255,255,255);
-    rect(this.posicaoGrid.x - 5, this.posicaoGrid.y - 5, this.largura*this.tamanhoCelula+10, this.altura*tamanhoCelula+10);
+    this.tamanhoCelula = alternarGrafico ? 10 : 18;
+    if (!jogoIniciado || pause) {
+      fill(255,0,0);
+      rect(this.posicaoGrid.x - 5, this.posicaoGrid.y - 5, this.largura*this.tamanhoCelula+10, this.altura*tamanhoCelula+10);  
+    }
     fill(color(0,0,0));
     rect(this.posicaoGrid.x, this.posicaoGrid.y, this.largura * this.tamanhoCelula, this.altura * this.tamanhoCelula);
     

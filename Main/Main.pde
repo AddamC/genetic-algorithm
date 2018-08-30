@@ -1,7 +1,8 @@
 import g4p_controls.*;
+import grafica.*;
 
 // variaveis relacionadas aos mapas
-ArrayList<Mapa> mapas  = new ArrayList<Mapa>();
+ArrayList<Mapa> mapas;
 Mapa mapaAtual         = null;
 int indiceMapa         = 0;
 int qtdeMapas          = 10;
@@ -11,26 +12,33 @@ PVector posicaoInicialPersonagem = new PVector();
 TabelaMapas tabelaMapas   = new TabelaMapas();
 
 // gerações
-int geracao = 0;
+int geracao;
 boolean novaGeracao       = false;
+
+// grafico
+GPlot grafico;
+GPointsArray pontosFitness;
 
 // variaveis de teste
 boolean isDebugEnabled    = false;
 
 // variaveis de controle
+boolean jogoIniciado      = true;
 boolean iniciarPosTela    = false;
 boolean autoSimulate      = true;
 boolean pause             = false;
 boolean desenharGrid      = false;
+boolean alternarGrafico   = true;
 double tempoAtualizacao   = 0;
 double tempoMovimentacao  = 0;
 double tempoMovLimite     = 1;
 int velocidadeAtualizacao = 4;
                                                                                                                                      
 void setup() {
-  size(1024,740);
+  size(1240,860);
   surface.setResizable(true);
-  criarMapas();
+  criarAmbiente();
+  configurarGrafico();
   createGUI();
   customGUI();
 }
@@ -38,26 +46,27 @@ void setup() {
 void draw() {
   // iniciar posicao da tela
   if (!iniciarPosTela) {
-    surface.setLocation(200,0);
+    surface.setLocation(50,0);
     iniciarPosTela = true;
-  }
-  
-  if (geracao > 4) {
-    println("teste");
   }
   
   clear();
   background(color(25,25,25));
   atualizarGUI();
-  if (isDebugEnabled) {
-    desenharTexto();
-  }
   try {
-    if (!pause) {
+    
+    if (jogoIniciado && !pause) {
       atualizarJogo();
     }
+    
     tabelaMapas.desenhar();
+    
     mapaAtual.desenhar();
+    if (alternarGrafico) {
+      desenharGrafico();
+    } else {
+      mapaAtual.tamanhoCelula = 18;
+    }
     
   } catch(Exception e) {
     e.printStackTrace();

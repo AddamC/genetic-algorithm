@@ -7,7 +7,7 @@ class Personagem extends GameObject {
   Personagem() {
     this.etiqueta = "personagem";
     this.cor = color(0,255,0);
-    this.qtdeMovimentos = 30;
+    this.qtdeMovimentos = 10;
     movimentos = new int[qtdeMovimentos];
   }
   

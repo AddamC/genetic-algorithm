@@ -41,6 +41,17 @@ public void btnLenta_click(GButton source, GEvent event) { //_CODE_:btnLenta:464
   tempoMovLimite = 3;
 } //_CODE_:btnLenta:464744:
 
+public void btnGerar_click(GButton source, GEvent event) { //_CODE_:btnGerar:701110:
+  regenerarJogo();
+  configurarGrafico();
+  jogoIniciado = false;
+  btnIniciar.setVisible(true);
+} //_CODE_:btnGerar:701110:
+
+public void btnExportar_click(GButton source, GEvent event) { //_CODE_:btnExportar:582027:
+  exportar();
+} //_CODE_:btnExportar:582027:
+
 public void panelInformacoes_click(GPanel source, GEvent event) { //_CODE_:panelInformacoes:431158:
   println("panelInformacoes - GPanel >> GEvent." + event + " @ " + millis());} //_CODE_:panelInformacoes:431158:
 
@@ -60,6 +71,11 @@ public void btnVisualizar4_click(GButton source, GEvent event) { //_CODE_:btnVis
   indiceMapa = mapasFitness.get(3);
 } //_CODE_:btnVisualizar4:866779:
 
+public void btnIniciar_click(GButton source, GEvent event) { //_CODE_:btnIniciar:808052:
+  jogoIniciado = true;
+  btnIniciar.setVisible(false);
+} //_CODE_:btnIniciar:808052:
+
 
 
 // Create all the GUI controls. 
@@ -69,7 +85,7 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setCursor(ARROW);
   surface.setTitle("Sketch Window");
-  panelOpcoes = new GPanel(this, 510, 50, 260, 250, "Opções");
+  panelOpcoes = new GPanel(this, 504, 49, 260, 250, "Opções");
   panelOpcoes.setText("Opções");
   panelOpcoes.setOpaque(true);
   panelOpcoes.addEventHandler(this, "panelOpcoes_Click1");
@@ -94,16 +110,19 @@ public void createGUI(){
   lblTempoMov.setOpaque(false);
   btnRapida = new GButton(this, 170, 150, 80, 30);
   btnRapida.setText("Rápida");
-  btnRapida.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   btnRapida.addEventHandler(this, "btnRapida_click");
   btnMedia = new GButton(this, 90, 150, 80, 30);
   btnMedia.setText("Média");
-  btnMedia.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   btnMedia.addEventHandler(this, "btnMedia_click");
   btnLenta = new GButton(this, 10, 150, 80, 30);
   btnLenta.setText("Lenta");
-  btnLenta.setLocalColorScheme(GCScheme.GOLD_SCHEME);
   btnLenta.addEventHandler(this, "btnLenta_click");
+  btnGerar = new GButton(this, 10, 189, 120, 30);
+  btnGerar.setText("Gerar novo jogo");
+  btnGerar.addEventHandler(this, "btnGerar_click");
+  btnExportar = new GButton(this, 142, 189, 80, 30);
+  btnExportar.setText("Exportar");
+  btnExportar.addEventHandler(this, "btnExportar_click");
   panelOpcoes.addControl(checkBoxAutoSimulate);
   panelOpcoes.addControl(checkBoxPause);
   panelOpcoes.addControl(checkboxDesenharGrid);
@@ -111,6 +130,8 @@ public void createGUI(){
   panelOpcoes.addControl(btnRapida);
   panelOpcoes.addControl(btnMedia);
   panelOpcoes.addControl(btnLenta);
+  panelOpcoes.addControl(btnGerar);
+  panelOpcoes.addControl(btnExportar);
   panelInformacoes = new GPanel(this, 780, 50, 240, 250, "informações");
   panelInformacoes.setText("informações");
   panelInformacoes.setOpaque(true);
@@ -131,7 +152,7 @@ public void createGUI(){
   label3.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   label3.setText("Quantidade de Mapas: ");
   label3.setOpaque(false);
-  label4 = new GLabel(this, 0, 140, 150, 20);
+  label4 = new GLabel(this, 1, 141, 150, 20);
   label4.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
   label4.setText("Contador de movimentos: ");
   label4.setOpaque(false);
@@ -177,6 +198,9 @@ public void createGUI(){
   btnVisualizar4 = new GButton(this, 590, 320, 80, 30);
   btnVisualizar4.setText("visualizar");
   btnVisualizar4.addEventHandler(this, "btnVisualizar4_click");
+  btnIniciar = new GButton(this, 918, 317, 80, 30);
+  btnIniciar.setText("Iniciar");
+  btnIniciar.addEventHandler(this, "btnIniciar_click");
 }
 
 // Variable declarations 
@@ -189,6 +213,8 @@ GLabel lblTempoMov;
 GButton btnRapida; 
 GButton btnMedia; 
 GButton btnLenta; 
+GButton btnGerar; 
+GButton btnExportar; 
 GPanel panelInformacoes; 
 GLabel lblMapa; 
 GLabel label1; 
@@ -204,3 +230,4 @@ GButton btnVisualizar1;
 GButton btnVisualizar2; 
 GButton btnVisualizar3; 
 GButton btnVisualizar4; 
+GButton btnIniciar; 

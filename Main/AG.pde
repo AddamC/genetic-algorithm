@@ -100,11 +100,7 @@ void preverFitness(Mapa mapa) {
     movimentar(posicao, movimentos[i]);
     mapa.verificarPosicaoObjeto(posicao);
     GameObject objeto = mapa.mapObjetos.get(posicao);
-    
-    if (objeto == null) {
-      print(); //<>//
-    }
-    
+     //<>//
     // verificar posicao com um conjunto de objetos
     if (objeto.etiqueta == "inimigo") {
       fitnessTotal -= 2;
@@ -114,7 +110,5 @@ void preverFitness(Mapa mapa) {
       fitnessTotal += 1;
     }
   }
-  println("\n\nfitnessTotal: " + mapa.fitnessTotal + "\nfitness: " + fitnessTotal);
   mapa.fitnessTotal = fitnessTotal;
-  println("fitnessTotal: " + mapa.fitnessTotal);
 }
