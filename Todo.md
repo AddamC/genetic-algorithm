@@ -1,0 +1,4 @@
+- [ ] Translate project to English
+- [ ] Create different view perspectives
+- [ ] Create real-time and preview simulation option
+- [ ] Create a configuration view to configure the simulation before start
